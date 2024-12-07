@@ -7,11 +7,12 @@
 
 int main()
 {
-/*
+
   int sum=0;
   const int nmax=1000;
   int mas[nmax];
-  int n=4;
+  int n;
+  std::cin>> n; 
   for (int i=0;i<n;i++)
   {
     std::cin>>mas[i];
@@ -48,11 +49,12 @@ int main()
   }
   if(sum!=n)
     std::cout<<"10"<<std::endl;
-    
+/*
 //"2 пунктик"
   const int nmax=1000;
   int mas[nmax];
-  int n=4;
+  int n;
+  std::cin>> n;
   for (int i=0;i<n;i++)
   {
     std::cin>>mas[i];
@@ -145,7 +147,7 @@ for (int i=0;i<n;i++)
   std::cout<<std::endl;
   }
 }
-/*/
+/*
 const int Nmax=20000;
 int mas[Nmax];
 int n=3;
@@ -184,8 +186,9 @@ for(int i=0;i<n;i++)
     if(a%j==0)
     {
       sum+=1;
+      break;
     }
-    break;
+    
   }
   
   if (sum==0)
@@ -200,7 +203,7 @@ for(int i=0;i<n;i++)
 }
 for (int i=0; i<n; i++)
 std::cout<<mas[i]<<"  "<< std::endl;
-
+*/
 }
 
 
