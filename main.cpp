@@ -48,7 +48,7 @@ int main()
   }
   if(sum!=n)
     std::cout<<"10"<<std::endl;
-    /*/
+    
 //"2 пунктик"
   const int nmax=1000;
   int mas[nmax];
@@ -98,10 +98,58 @@ for(int i=0; i<n-1;i++)
     }
   for (int i=0;i<n;i++)
     std::cout<<mas[i]<<std::endl;
+/*/
+const int nmax=3;
+const int mmax=3;
+int matrix[nmax][mmax];
 
+int n,m;
+std::cin>>n>>m;
+for (int i=0;i<n;i++)
+{
+  for(int j=0;j<n;j++)
+  {
+  std::cin>> matrix[i][j];
+  }
+}
+int Msum=-10000;
+int iisk=-1;
+for (int i=0; i<n;i++)
+{int sum=0;
+  for(int j=0; j<n;j++)
+  {
+    
+    int a=matrix[i][j];
+    sum+=a;
+    
+  }
+  if(sum>Msum)
+  {
+    Msum=sum;
+    iisk=i;
 
+  }
+}
+std::cout<<Msum<<iisk<<std::endl;
+for(int j=0;j<n;j++)
+  { int i=iisk;
+     matrix[i][j] = Msum;
+  }
+
+for (int i=0;i<n;i++)
+{
+  for(int j=0;j<n;j++)
+  {
+      std::cout<< matrix[i][j] <<" ";
+  std::cout<<std::endl;
+  }
+}
 
 }
+
+
+
+
     
 
 
