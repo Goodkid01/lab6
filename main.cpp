@@ -98,7 +98,8 @@ for(int i=0; i<n-1;i++)
     }
   for (int i=0;i<n;i++)
     std::cout<<mas[i]<<std::endl;
-/*/
+
+// "3 пункт "
 const int nmax=3;
 const int mmax=3;
 int matrix[nmax][mmax];
@@ -144,6 +145,61 @@ for (int i=0;i<n;i++)
   std::cout<<std::endl;
   }
 }
+/*/
+const int Nmax=20000;
+int mas[Nmax];
+int n=3;
+for(int i=0 ; i<n; i++ )
+{
+  std::cin>>mas[i];
+}
+for(int i=0;i<n;i++)
+{
+  int x=mas[i];
+  int y=0;
+  while(x>0)
+  {
+    y=y*10+x%10;
+    x/=10;
+  }
+
+  if (mas[i]==y)
+  {
+    for(int j=i;j<n-1;j++)
+    {
+      mas[j] = mas[j+1];
+      n--;
+      i--;
+    }
+  }
+}
+for (int i=0; i<n; i++)
+std::cout<<mas[i]<<"  "<< std::endl;
+
+for(int i=0;i<n;i++)
+{ int sum=0;
+ for (int j=2;j<=mas[i];j++)
+  {
+    int a=mas[i];
+    if(a%j==0)
+    {
+      sum+=1;
+    }
+    break;
+  }
+  
+  if (sum==0)
+  {
+    for(int j =n;j>i;j--)
+    {
+      mas[j]=mas[j-1];
+      i++;
+      n++;
+    }
+  }    
+}
+for (int i=0; i<n; i++)
+std::cout<<mas[i]<<"  "<< std::endl;
 
 }
 
